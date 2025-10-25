@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Grid
-  engineVersion: 262.0.0
-  forkId: syndicate-goob
-  forkVersion: 1e97ac059b82fc8e332fa12fab8596e6f2915bc9
-  time: 10/25/2025 06:10:57
-  entityCount: 187
+  engineVersion: 264.0.0
+  forkId: ""
+  forkVersion: ""
+  time: 10/25/2025 09:31:41
+  entityCount: 186
 maps: []
 grids:
 - 1
@@ -61,6 +61,11 @@ entities:
     - type: OccluderTree
     - type: SpreaderGrid
     - type: Shuttle
+      dampingModifiers:
+        Cruise: 0.0075
+        Dampen: 0.25
+        Anchor: 2
+        None: 0.25
       dampingModifier: 0.25
     - type: GridPathfinding
     - type: Gravity
@@ -134,6 +139,7 @@ entities:
         chunkSize: 4
     - type: GasTileOverlay
     - type: RadiationGridResistance
+    - type: FTLDrive
 - proto: AirAlarm
   entities:
   - uid: 182
@@ -201,13 +207,6 @@ entities:
     components:
     - type: Transform
       pos: 0.5,-6.5
-      parent: 1
-- proto: BarricadeSteelFolding
-  entities:
-  - uid: 154
-    components:
-    - type: Transform
-      pos: 0.5,-2.5
       parent: 1
 - proto: Bucket
   entities:
@@ -806,7 +805,6 @@ entities:
       parent: 1
     - type: GasPressurePump
       targetPressure: 4500
-      enabled: True
     - type: AtmosPipeColor
       color: '#0000FFFF'
   - uid: 152
@@ -817,7 +815,6 @@ entities:
       parent: 1
     - type: GasPressurePump
       targetPressure: 4500
-      enabled: True
     - type: AtmosPipeLayers
       pipeLayer: Secondary
     - type: AtmosPipeColor
